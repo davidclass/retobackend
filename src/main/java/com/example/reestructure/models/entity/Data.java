@@ -11,9 +11,12 @@ public class Data {
     private int per_page;
     private int total;
     private int total_pages;
-    private LinkedList<User> data;
+    private LinkedList<User> user;
     private Object support;
 
+    /**
+     * METODOS
+     * */
     public int getPage() {
         return page;
     }
@@ -47,11 +50,11 @@ public class Data {
     }
 
     public LinkedList<User> getData() {
-        return data;
+        return user;
     }
 
-    public void setData(LinkedList<User> data) {
-        this.data = data;
+    public void setData(LinkedList<User> user) {
+        this.user = user;
     }
 
     public Object getSupport() {
@@ -62,7 +65,7 @@ public class Data {
         this.support = support;
     }
 }
-    /** METODOS **/
+
 
 
 

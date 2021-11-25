@@ -2,6 +2,7 @@ package com.example.reestructure.controllers;
 
 import com.example.reestructure.models.entity.UserNew;
 //import com.example.reestructure.models.service.HttpClient;
+import com.example.reestructure.models.service.IDataService;
 import com.example.reestructure.models.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -16,13 +17,19 @@ import java.util.Map;
 @CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE })
 @RestController
 @RequestMapping("/api")
-public class UserReectructure {
+public class UserReectructureResController {
 
     /** VARIABLES **/
 
     @Autowired
     @Qualifier("userService")
     private IUserService userService;
+
+    @Autowired
+    @Qualifier("dataService")
+    private IDataService dataService;
+
+
 
     /** METODOS **/
 
@@ -41,7 +48,8 @@ public class UserReectructure {
         Map<String, Object> response = new HashMap<>();
 
         try{
-            listUserNew = userService.formatDataUser();
+//            listUserNew = userService.formatDataUser();
+            listUserNew = dataService.formatDataUser();
 
         }catch (Exception e){
 

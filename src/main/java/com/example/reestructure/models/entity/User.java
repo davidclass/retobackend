@@ -9,9 +9,6 @@ public class User {
     private String last_name;
     private String avatar;
 
-
-
-
     /** METODOS **/
 
     public int getId() {
